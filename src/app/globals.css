@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.cursor-animation {
+  overflow: hidden; 
+  border-right: 1px solid orange; 
+  white-space: nowrap;
+  line-height: 80px;
+  height: 100%;
+  width:100%;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+.reverse-cursor-animation {
+  overflow: hidden; 
+  border-right: 1px solid orange; 
+  white-space: nowrap;
+  line-height: 80px;
+  width: 0;
+  animation: 
+    typing-reverse 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+.nav-link-out{
+  letter-spacing: 1px;
+  animation: navItemHoverOut 0.4s ease-in-out;
+}
+
+.nav-link {
+  position: relative;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.nav-link:hover {
+  letter-spacing: 2px;
+  animation: navItemHover 0.4s ease-in-out;
+}
+
+.nav-link:after  {
+  content: '';
+  display:none;
+  position: absolute;
+  bottom: -4px;
+  padding:1px;
+  border-radius: 2px;
+  background-color: orange;
+  width: 0;
+  transition: all 0.4s ease-in-out;
+}
+.nav-link:hover::after {
+  display: block;
+  width: 100%;
+  animation: underline 0.4s ease-in-out;
+}
+
+.skills-container{
+  animation: animate 4s linear infinite;
+}
+
+
+@keyframes navItemHoverOut {
+  0% {
+    letter-spacing: 2px;
+  }
+  100% {
+    letter-spacing: 1px;
+  }
+}
+
+@keyframes navItemHover {
+  0% {
+    letter-spacing: 1px;
+  }
+  100% {
+    letter-spacing: 2px;
+  }
+}
+
+@keyframes underline {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes cursor {
+  0%, 100%, 50% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+@keyframes typing-reverse {
+  from { width: 100% }
+  to { width: 0 }
+}
+
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
