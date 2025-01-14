@@ -2,13 +2,11 @@
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useState, useEffect , useRef } from "react";
 import Model from "./Model";
-import ScrollTrigger from "gsap-trial/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
 export default function Scene() {
 
   const [isMobile, setIsMobile] = useState(false);
-  const modelRef = useRef(null)
 
 
   useGSAP(() => {

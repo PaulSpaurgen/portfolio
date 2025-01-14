@@ -1,6 +1,6 @@
 "use client"
 import dynamic from 'next/dynamic'
-import { useEffect, useLayoutEffect, useRef } from 'react'
+import {useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react';

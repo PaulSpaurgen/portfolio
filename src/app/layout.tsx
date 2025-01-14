@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Slabo_27px } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
-import Skills from "@/components/Skills";
 
 
 const slabo = Slabo_27px({

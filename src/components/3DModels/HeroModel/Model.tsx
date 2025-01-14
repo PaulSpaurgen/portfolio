@@ -5,7 +5,7 @@ declare global {
   }
 }
 
-import { useAnimations, useGLTF, useScroll } from "@react-three/drei"
+import { useAnimations, useGLTF } from "@react-three/drei"
 import { useEffect, useRef } from "react"
 import { AnimationAction, Group, LoopOnce, LoopRepeat } from "three"
 
