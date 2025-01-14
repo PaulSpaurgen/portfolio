@@ -14,11 +14,11 @@ useGLTF.preload("/robot.glb")
 
 export default function Model({ isMobile }: { isMobile: boolean }) {
   const group = useRef<Group>(null)
-  const { nodes, materials, animations, scene } = useGLTF(
+  const {  animations, scene } = useGLTF(
     "/robot.glb"
   )
 
-  const { actions, clips } = useAnimations(animations, scene)
+  const { actions } = useAnimations(animations, scene)
 
   useEffect(() => {
     initializeAnimation()

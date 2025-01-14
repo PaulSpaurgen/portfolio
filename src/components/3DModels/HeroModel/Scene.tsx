@@ -1,6 +1,6 @@
 "use client"
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useState, useEffect , useRef } from "react";
+import { Suspense, useState, useEffect  } from "react";
 import Model from "./Model";
 import { useGSAP } from "@gsap/react";
 
