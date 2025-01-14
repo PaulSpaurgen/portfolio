@@ -58,35 +58,6 @@ export default function Home() {
 
     // Add responsive conditions for pinning
     const mm = gsap.matchMedia();
-    
-    mm.add("(min-width: 768px)", () => {
-      // Desktop pinning
-      gsap.to(expRef.current, {
-        scrollTrigger: {
-          trigger: expRef.current,
-          start: "top top",
-          end: "bottom bottom",
-          pin: true,
-          pinSpacing: true,
-        },
-      })
-    });
-
-    mm.add("(max-width: 767px)", () => {
-      // Mobile pinning with adjusted settings
-      gsap.to(expRef.current, {
-        scrollTrigger: {
-          trigger: expRef.current,
-          start: "top top",
-          endTrigger: "html", // Pin against the entire document
-          end: "bottom bottom",
-          pin: true,
-          pinSpacing: true,
-          invalidateOnRefresh: true, // Recalculate on resize/refresh
-          anticipatePin: 1,
-        },
-      })
-    });
 
     // Hero section pinning remains unchanged
     gsap.to(heroRef.current, {
@@ -95,6 +66,18 @@ export default function Home() {
         start: 'top top',
         pin: true,
         pinSpacing: false,
+      },
+    })
+    gsap.to(expRef.current, {
+      scrollTrigger: {
+        trigger: expRef.current,
+        start: "top top",
+        endTrigger: "html", // Pin against the entire document
+        end: "bottom bottom",
+        pin: true,
+        pinSpacing: true,
+        invalidateOnRefresh: true, // Recalculate on resize/refresh
+        anticipatePin: 1,
       },
     })
   }, [heroRef, expRef])

@@ -219,8 +219,8 @@ export default function Experience() {
     }, { scope: expRef })
 
     return (
-        <div className="relative h-screen w-full" ref={expRef}>
-            <div className="text-white h-screen py-36 relative md:max-w-[70%] md:mx-auto  ">
+        <div className="h-full w-full" ref={expRef}>
+            <div className="text-white h-full pt-36 relative md:max-w-[70%] md:mx-auto  ">
                 <div className="absolute top-[60px] left-[10px] md:top-[-4px] md:left-[-132px] w-fit   " id="experience-title">
                     <h1 className="text-white md:text-9xl text-4xl  font-extrabold opacity-10"></h1>
                 </div>

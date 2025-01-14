@@ -25,7 +25,7 @@ export default function Nav() {
                     </div>
                     <div className={commonClasses} onMouseOver={onmouseoverEvent} onMouseOut={onmouseoutEvent} onClick={()=>{
                         const expEle = document.getElementById("experience-main-render");
-                        expEle?.scrollIntoView({ behavior: "smooth" });
+                        expEle?.scrollIntoView({ block: "start", behavior: "smooth" });
                     }}>
                         <h1>Experience</h1>
                     </div>

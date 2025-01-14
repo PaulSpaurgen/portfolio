@@ -14,14 +14,15 @@ export default function ContactModal({ isOpen , setIsOpen }: { isOpen: boolean ,
                 </button>
             </div>
             <div className="flex gap-4 mt-2  ">
-                    <a href="https://www.linkedin.com/in/paul-spaurgen/" rel="noopener noreferrer" target="_blank">
-                        <Image src="/images/linkedin.svg" alt="LinkedIn" width={36} height={36} />
-                    </a>
+                   
                     <a href="https://github.com/PaulSpaurgen" rel="noopener noreferrer" target="_blank">
                         <Image src="/images/github.svg" alt="GitHub" width={36} height={36} />
                     </a>
                     <a href="mailto:gspaurgen@gmail.com" rel="noopener noreferrer" target="_blank">
                         <Image src="/images/gmail.svg" alt="Gmail" width={36} height={36} />
+                    </a>
+                    <a href="https://www.linkedin.com/in/paul-spaurgen/" rel="noopener noreferrer" target="_blank">
+                        <Image src="/images/linkedin.svg" alt="LinkedIn" width={36} height={36} />
                     </a>
                 </div>
 
