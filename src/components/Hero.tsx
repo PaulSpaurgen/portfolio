@@ -63,15 +63,23 @@ export default function Hero() {
     }
 
     return (
-        <div className=" font-slabo flex h-screen  md:items-center relative z-10 md:p-8 p-0">
-            <div className="text-white mt-[100px] md:mt-0">
+        <div className="flex  h-screen  w-full relative z-10 overflow-hidden bg-black">
+            <video
+                src="/video/bgVideoMain.mp4"
+                autoPlay
+                muted
+                playsInline
+                loop
+                className="absolute top-[30%] left-0 w-full h-full object-cover z-[-1px]"
+            />
+            <div className="text-white absolute top-[15%] left-[5%] md:left-[10%] md:top-[30%]">
                 <div className="flex gap-2 max-w-fit justify-left h-fit max-h-[40px]" id="title">
                     <h1 className="md:text-4xl w-fit text-2xl" >Hi, I'm Paul</h1>
                 </div>
-                <div className="max-w-fit mt-4 min-h-[70px]  md:text-6xl text-4xl">
+                <div className="max-w-fit mt-4 min-h-[80px]  md:text-6xl text-3xl">
                     <h1 id="proffession" className="font-extrabold line-height-[80px] " >{currentText?.split(" ")[0]} <span className="text-orange-500"> {currentText?.split(" ")[1]}</span></h1>
                 </div>
-                <p className="text-white mt-6 md:max-w-[600px] max-w-[300px] md:font-semibold font-bold p-5 bg-black/50 rounded-lg">I'm a software engineer with a passion for creating beautiful and functional web applications. I'm a quick learner and I'm always looking to improve my skills. Bringing life to the web.</p>
+                <p className="text-white mt-4 md:max-w-[600px] max-w-[250px] md:font-semibold font-bold">I'm a software engineer with a passion for creating beautiful and functional web applications. I'm a quick learner and I'm always looking to improve my skills. Bringing life to the web.</p>
             </div>
         </div>
     );

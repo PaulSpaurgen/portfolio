@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
-import { Slabo_27px } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 
 
-const slabo = Slabo_27px({
-  weight: "400",
-  variable: "--font-slabo",
+
+const manrope = Manrope({
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-manrope",
   subsets: ["latin"],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -21,18 +23,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  
+
   return (
     <html lang="en">
-      <body
-        className={`${slabo.variable}  antialiased  bg-black `}
-      >
-        <main >
+      <body className={`${manrope.variable} antialiased bg-black `}>
+        <main className="w-full">
           <Nav />
-          <div  >
-            {children}
-          </div>
-      
+          {children}
         </main>
       </body>
     </html>
