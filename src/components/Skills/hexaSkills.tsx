@@ -40,13 +40,12 @@ export default function HexaSkills() {
       <div className={polygonContainerClass}>
         <Polygon imageUrl="/images/skills/web3.svg" url="https://web3.foundation/" />
         <Polygon imageUrl="/images/skills/svelte.svg" url="https://svelte.dev/" />
-        <Polygon imageUrl="/images/skills/typescript.svg" url="https://www.typescriptlang.org/" />
       </div>
 
       <div className={polygonContainerClass}>
         <Polygon imageUrl="/images/skills/html.svg" url="https://developer.mozilla.org/en-US/docs/Web/HTML" />
         <Polygon imageUrl="/images/skills/css.svg" url="https://developer.mozilla.org/en-US/docs/Web/CSS" />
-       
+        <Polygon imageUrl="/images/skills/typescript.svg" url="https://www.typescriptlang.org/" />
 
       </div>
     </div>
