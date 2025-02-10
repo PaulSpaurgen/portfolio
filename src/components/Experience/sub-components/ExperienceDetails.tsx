@@ -50,7 +50,7 @@ export default function ExperienceDetails({
 
           <div className="flex flex-col justify-center  ">
             <h1 className="md:text-2xl sm:text-xl text-lg font-bold">
-              {company}
+              {company} 
             </h1>
             <h1 className="md:text-sm text-xs ">{position}</h1>
           </div>
@@ -65,12 +65,14 @@ export default function ExperienceDetails({
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="md:text-2xl text-xl font-bold  hover:text-cyan-400 transition-all duration-300"
+                className="md:text-2xl text-xl font-bold  hover:text-cyan-400 transition-all duration-300 flex items-center gap-2"
               >
-                {project.name}
+                {project.name} <span className="text-cyan-400"><Image src="/images/link.svg" alt="LinkedIn" width={16} height={16} /></span>
               </a>
               <div className="flex gap-2 flex-wrap mt-4">
                 <ul className="ml-4">
+
+
                   {project.achievements.map((achievement: any, index: any) => (
                     <li
                       key={`${index}-${achievement}`}
