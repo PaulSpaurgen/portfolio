@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import { useMobile } from "@/context/MobileContext";
 const polygonClass =
   "md:w-[150px] w-[100px] md:h-[150px] h-[100px] md:m-[1.5px] m-[1px] bg-gray-800 flex justify-center items-center hover:opacity-80 transition-all duration-300";
 const polygonContainerClass =
@@ -10,12 +10,13 @@ interface PolygonProps {
   url?: string;
 }
 
-const isMobile = window.innerWidth < 768;
 
 
 export default function HexaSkills() {
+  
   return (
     <div className="  h-fit w-fit ml-[40px]">
+
       <div className={polygonContainerClass}>
         <Polygon imageUrl="/images/skills/github.svg" url="https://github.com/PaulSpaurgen" />
 
@@ -52,9 +53,11 @@ export default function HexaSkills() {
 }
 
 function Polygon({ imageUrl, url }: PolygonProps) {
+  const { isMobile } = useMobile();
   return (
     <a
       className={polygonClass}
+
 
       style={{
         clipPath:

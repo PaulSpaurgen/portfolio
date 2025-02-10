@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useMobile } from "@/context/MobileContext";
 
 export default function ExperienceCard({
   logo,
@@ -8,13 +9,12 @@ export default function ExperienceCard({
   inView?: true | boolean;
   id: number;
 }) {
+  const { isMobile } = useMobile();
   const nonSelectedElement =
     "bg-white/10 backdrop-blur-sm shadow-lg border border-white/10";
 
   const selectedElement =
     "bg-white backdrop-blur-sm shadow-lg border border-white/10";
-
-  const isMobile = window.innerWidth < 768;
 
 
   return (

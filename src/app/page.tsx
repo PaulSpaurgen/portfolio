@@ -2,12 +2,15 @@
 
 import { AppProvider } from "@/context/AppContext"
 import Home from "@/page-components/Home"
+import { MobileProvider } from "@/context/MobileContext"
 
 export default function Page() {
   return (
-    <AppProvider>
-      <Home />
-    </AppProvider>
+    <MobileProvider>
+      <AppProvider>
+        <Home />
+      </AppProvider>
+    </MobileProvider>
   )
 }
 
