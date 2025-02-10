@@ -7,10 +7,11 @@ interface PolygonProps {
     imageUrl?: string;
 }
 
-export default function Skills() {
+export default function HexaSkills() {
     return (
         <div className=" absolute bottom-0 left-0 overflow-hidden h-[100dvh] w-fit z-20 ">
             <div className={polygonContainerClass}>
+
                 <Polygon imageUrl="/images/skills/github.svg" />
                 <Polygon imageUrl="/images/skills/react.svg" />
                 

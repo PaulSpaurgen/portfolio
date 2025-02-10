@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
-import Nav from "@/components/Nav";
 
 
 
@@ -28,7 +27,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${manrope.variable} antialiased bg-black `}>
         <main className="w-full">
-          <Nav />
           {children}
         </main>
       </body>
