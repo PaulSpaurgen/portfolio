@@ -69,13 +69,16 @@ export default function Hero() {
 
   return (
     <div className="flex  h-screen  w-full relative z-10 overflow-hidden bg-black ">
+      
       <video
-        src="/video/bgVideoMain.mp4"
+        src="/video/bgVideoMain.webm"
+        poster="/images/poster.webp"
         autoPlay
         muted
         playsInline
         loop
         className="absolute top-[30%] left-0 w-full h-full object-cover z-[-1px]"
+        preload="auto"
       />
       <div className=" mx-auto md:max-w-[80%] max-w-[90%]  w-full ">
         <div className="text-white absolute top-[30%] md:top-[30%] ">

@@ -45,7 +45,7 @@ export default function HexaSkills() {
       <div className={polygonContainerClass}>
         <Polygon imageUrl="/images/skills/html.svg" url="https://developer.mozilla.org/en-US/docs/Web/HTML" />
         <Polygon imageUrl="/images/skills/css.svg" url="https://developer.mozilla.org/en-US/docs/Web/CSS" />
-        <Polygon imageUrl="/images/skills/typescript.svg" url="https://www.typescriptlang.org/" />
+        <Polygon imageUrl="/images/skills/typescriptLogoDisp.svg" url="https://www.typescriptlang.org/" />
 
       </div>
     </div>

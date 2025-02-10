@@ -18,10 +18,11 @@ export default function ContactModal({ isOpen , setIsOpen }: { isOpen: boolean ,
                     <a href="mailto:gspaurgen@gmail.com" rel="noopener noreferrer" target="_blank">
                         <Image src="/images/gmail.svg" alt="Gmail" width={36} height={36} />
                     </a>
-                    <a href="https://www.linkedin.com/in/paul-spaurgen/" rel="noopener noreferrer" target="_blank">
-                        <Image src="/images/linkedin.svg" alt="LinkedIn" className="bg-white object-contain" width={36} height={36} />
+                    <a href="https://www.linkedin.com/in/paul-spaurgen/"  rel="noopener noreferrer" target="_blank">
+                        <Image src="/images/linkedinIconDisp.svg" alt="LinkedIn" width={36} height={36} />
                     </a>
                 </div>
+
 
                 <div className="modal-action justify-center">
                     <a className="btn btn-outline btn-ghost" href="https://calendly.com/gspaurgen/30min" target="_blank">
