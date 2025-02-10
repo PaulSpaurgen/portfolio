@@ -63,17 +63,11 @@ export default function Model({ isMobile }: { isMobile: boolean }) {
     const onFinished = (e: any) => {
       if (e.action === action) {
         console.log("Animation finished:", action);
-
-        // Start fading out current animation
-        // action.fadeOut(0.3);
         callback();
-        // Wait a brief moment before starting next animation
         setTimeout(() => {
-          // Remove listener before starting next animation
           mixer.removeEventListener('finished', onFinished);
-          // Execute callback for next animation
 
-        }, 200); // Adjust timing as needed
+        }, 200);
       }
     };
 
@@ -85,10 +79,10 @@ export default function Model({ isMobile }: { isMobile: boolean }) {
   };
 
   return (
-    <group position={isMobile ? [ 0.5, -6, -1]:[10, -1, -1]}>
+    <group position={isMobile ? [ 1, -6, -1]:[10, 0, -1]}>
       <group
         ref={group}
-        scale={0.018}
+        scale={0.015}
         rotation={[60, 0, 0]}
       >
         <primitive 
