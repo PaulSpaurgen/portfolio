@@ -32,10 +32,11 @@ export default function ExperienceDetails({
 
   return (
     <div
-      className="p-4 sm:p-6 md:p-8 bg-white  backdrop-blur-sm rounded-2xl w-full text-black md:h-[60vh] h-[60vh] w-[300px] sm:w-[400px] md:w-[1000px] overflow-y-auto"
+      className="p-4 sm:p-6 md:p-8 bg-white  backdrop-blur-sm rounded-2xl w-full text-black h-[60vh] w-[300px] sm:w-[400px] md:w-[600px] lg:w-[1000px] overflow-y-auto"
       id={`experience-${id}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+
     >
       <div ref={ref}>
         <div className="flex gap-4 border-b border-cyan-500 pb-4">
@@ -84,7 +85,7 @@ export default function ExperienceDetails({
                 {project.technologies.map((technology: any, index: any) => (
                   <span
                     key={`${index}-${technology}`}
-                    className="text-sm text-gray-800 px-2 py-1 rounded-md bg-gray-100 backdrop-blur-md border border-white/30 text-white"
+                    className="text-sm text-gray-800 px-2 py-1 rounded-md bg-gray-100 backdrop-blur-md border border-white/30"
                   >
                     {technology}
                   </span>

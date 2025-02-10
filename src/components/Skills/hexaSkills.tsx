@@ -1,59 +1,73 @@
 import Image from "next/image";
 
-const polygonClass = "w-[250px] h-[250px] opacity-20 m-[2.5px] bg-[#636363] flex justify-center items-center hover:opacity-80 hover:scale-105 transition-all duration-300"
-const polygonContainerClass = "flex flex-inline mt-[-62.5px] ml-[-125px] even:ml-[2.5px]"
+const polygonClass =
+  "md:w-[150px] w-[100px] md:h-[150px] h-[100px] md:m-[1.5px] m-[1px] bg-gray-800 flex justify-center items-center hover:opacity-80 transition-all duration-300";
+const polygonContainerClass =
+  "flex flex-inline md:mt-[-37.5px] mt-[-25px] md:ml-[-75px] ml-[-50px] even:md:ml-[1.5px] even:ml-[1px] cursor-pointer";
 
 interface PolygonProps {
-    imageUrl?: string;
+  imageUrl?: string;
+  url?: string;
 }
+
+const isMobile = window.innerWidth < 768;
+
 
 export default function HexaSkills() {
-    return (
-        <div className=" absolute bottom-0 left-0 overflow-hidden h-[100dvh] w-fit z-20 ">
-            <div className={polygonContainerClass}>
+  return (
+    <div className="  h-fit w-fit ml-[40px]">
+      <div className={polygonContainerClass}>
+        <Polygon imageUrl="/images/skills/github.svg" url="https://github.com/PaulSpaurgen" />
 
-                <Polygon imageUrl="/images/skills/github.svg" />
-                <Polygon imageUrl="/images/skills/react.svg" />
-                
-            </div>
-            <div className={polygonContainerClass}>
-                <Polygon imageUrl="/images/skills/nextjs.svg" />
+        <Polygon imageUrl="/images/skills/react.svg" url="https://react.dev/" />
 
-            </div>
-            <div className={polygonContainerClass}>
-                <Polygon imageUrl="/images/skills/web3.svg" />
-                <Polygon  imageUrl="/images/skills/svelte.svg"/>
-            </div>
-            <div className={polygonContainerClass}>
-                <Polygon imageUrl="/images/skills/html.svg" />
-                <Polygon imageUrl="/images/skills/css.svg" />
-            </div>
-            <div className={polygonContainerClass}>
-                <Polygon imageUrl="/images/skills/three.svg" />
-                <Polygon imageUrl="/images/skills/javascript.svg" />
-                <Polygon imageUrl="/images/skills/node-js.svg" />
-                <Polygon imageUrl="/images/skills/typescript.svg" />
 
-            </div>
-            <div className={polygonContainerClass}>
-                <Polygon />
-                <Polygon />
-                <Polygon />
-                <Polygon />
-            </div>
-        </div>
-    )
+        <Polygon imageUrl="/images/skills/mongodb.svg" url="https://www.mongodb.com/" />
+
+      </div>
+      <div className={polygonContainerClass}>
+        <Polygon imageUrl="/images/skills/nextjs.svg" url="https://nextjs.org/" />
+        <Polygon imageUrl="/images/skills/gsap.svg" url="https://gsap.com/" />
+      </div>
+
+      <div className={polygonContainerClass}>
+        <Polygon imageUrl="/images/skills/three.svg" url="https://threejs.org/" />
+        <Polygon imageUrl="/images/skills/javascript.svg" url="https://developer.mozilla.org/en-US/docs/Web/JavaScript" />
+        <Polygon imageUrl="/images/skills/node-js.svg" url="https://nodejs.org/en" />
+
+      </div>
+      <div className={polygonContainerClass}>
+        <Polygon imageUrl="/images/skills/web3.svg" url="https://web3.foundation/" />
+        <Polygon imageUrl="/images/skills/svelte.svg" url="https://svelte.dev/" />
+      </div>
+
+      <div className={polygonContainerClass}>
+        <Polygon imageUrl="/images/skills/html.svg" url="https://developer.mozilla.org/en-US/docs/Web/HTML" />
+        <Polygon imageUrl="/images/skills/css.svg" url="https://developer.mozilla.org/en-US/docs/Web/CSS" />
+        <Polygon imageUrl="/images/skills/typescript.svg" url="https://www.typescriptlang.org/" />
+
+      </div>
+    </div>
+  );
 }
 
+function Polygon({ imageUrl, url }: PolygonProps) {
+  return (
+    <a
+      className={polygonClass}
 
-function Polygon({ imageUrl }: PolygonProps) {
-    return (
-        <div className={polygonClass} 
-        style={{ 
-            clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
-        }}>
-            {imageUrl && <Image src={imageUrl} alt={imageUrl} width={100} height={100} />}
-        </div>
-    )
+      style={{
+        clipPath:
+          "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+      }}
+      href={url}
+      target="_blank"
+    >
+      {imageUrl && (
+        <Image src={imageUrl} alt={imageUrl} width={isMobile ? 30 : 50} height={isMobile ? 30 : 50} />
+      )}
+
+
+    </a>
+  );
 }
-

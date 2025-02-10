@@ -22,7 +22,7 @@ export default function HeadingTextContainer({
   }, [activeIndex]);
   return (
     <div
-      className="absolute top-[40px]  md:top-[40px] w-fit text-white/30 md:text-9xl text-4xl  font-extrabold "
+      className="absolute top-[40px]  md:top-[40px] w-fit text-white/30 lg:text-9xl md:6xl text-4xl  font-extrabold "
       id={id}
     ></div>
   );
