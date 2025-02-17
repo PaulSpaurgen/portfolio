@@ -44,7 +44,7 @@ export default function Scene() {
 
     const slideTwoDesktopAnimation = {
       bottom: "0%",
-      right: "0%",
+      right: "80%",
     }
 
     const slideTwoMobileAnimation = {
