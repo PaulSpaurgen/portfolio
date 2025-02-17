@@ -1,6 +1,5 @@
 "use client"
 import dynamic from 'next/dynamic'
-import { useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useEffect } from 'react'
@@ -63,9 +62,7 @@ export default function Home() {
             <div className=" swiper w-full h-screen  overflow-hidden ">
                 <div className="swiper-wrapper">
                     <div className={commonPageClasses}>
-                 
-
-                        <Scene />
+                    
                         <Hero />
                     </div>
                     <div  className={commonPageClassesWithAutoMargin} >
