@@ -79,7 +79,7 @@ export default function Model({ isMobile }: { isMobile: boolean }) {
   };
 
   return (
-    <group position={isMobile ? [ 1, -6, -1]:[10, 0, -1]}>
+    <group position={[0,-2,0]}>
       <group
         ref={group}
         scale={0.015}

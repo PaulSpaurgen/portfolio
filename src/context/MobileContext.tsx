@@ -2,9 +2,13 @@ import { createContext, useContext, useEffect, useState } from 'react';
 
 interface MobileContextType {
   isMobile: boolean;
+  setIsMobile: (value: boolean) => void;
 }
 
-const MobileContext = createContext<MobileContextType>({ isMobile: false });
+const MobileContext = createContext<MobileContextType>({ 
+  isMobile: false,
+  setIsMobile: () => {} 
+});
 
 export function MobileProvider({ children }: { children: React.ReactNode }) {
   const [isMobile, setIsMobile] = useState(false);
@@ -21,7 +25,7 @@ export function MobileProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <MobileContext.Provider value={{ isMobile }}>
+    <MobileContext.Provider value={{ isMobile, setIsMobile }}>
       {children}
     </MobileContext.Provider>
   );

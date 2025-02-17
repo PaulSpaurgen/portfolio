@@ -11,6 +11,7 @@ import Nav from '@/components/Nav'
 import { useAppContext } from '@/context/AppContext'
 import Skills from '@/components/Skills'
 
+
 const Hero = dynamic(() => import('@/components/Hero'), {
     ssr: false,
 })
@@ -18,9 +19,6 @@ const Experience = dynamic(() => import('@/components/Experience'), {
     ssr: false,
 })
 
-const Scene = dynamic(() => import('@/components/3DModels/HeroModel/Scene'), {
-    ssr: false,
-})
 
 export default function Home() {
     const { setActiveIndex, setSwiper } = useAppContext();
