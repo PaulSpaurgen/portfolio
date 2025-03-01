@@ -8,7 +8,7 @@ declare global {
 import { useAnimations, useGLTF } from "@react-three/drei"
 import { useEffect, useRef } from "react"
 import { AnimationAction, Group, LoopOnce, LoopRepeat } from "three"
-
+import { useAppContext } from "@/context/AppContext"
 
 useGLTF.preload("/robot.glb")
 
@@ -17,12 +17,17 @@ export default function Model({ isMobile }: { isMobile: boolean }) {
   const {  animations, scene } = useGLTF(
     "/robot.glb"
   )
+  const { setIsModelLoaded } = useAppContext()
 
   const { actions } = useAnimations(animations, scene)
 
   useEffect(() => {
-    initializeAnimation()
-  }, []);
+    if (scene) {
+      console.log("model loaded")
+      setIsModelLoaded(true)
+      initializeAnimation()
+    }
+  }, [scene]);
 
   
 
@@ -62,7 +67,6 @@ export default function Model({ isMobile }: { isMobile: boolean }) {
 
     const onFinished = (e: any) => {
       if (e.action === action) {
-        console.log("Animation finished:", action);
         callback();
         setTimeout(() => {
           mixer.removeEventListener('finished', onFinished);
@@ -79,10 +83,9 @@ export default function Model({ isMobile }: { isMobile: boolean }) {
   };
 
   return (
-    <group position={isMobile ? [ 1, -6, -1]:[10, 0, -1]}>
+    <group position={[0,-2,0]} ref={group}>
       <group
-        ref={group}
-        scale={0.015}
+        scale={ 0.015}
         rotation={[60, 0, 0]}
       >
         <primitive 
