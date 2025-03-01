@@ -7,6 +7,8 @@ interface AppContextType {
   setActiveIndex: (index: number) => void;
   swiper: Swiper | null;
   setSwiper: (swiper: Swiper | null) => void;
+  isModelLoaded: boolean;
+  setIsModelLoaded: (isModelLoaded: boolean) => void;
 }
 
 // Create the context with a default value
@@ -16,12 +18,15 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 export function AppProvider({ children }: { children: ReactNode }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [swiper, setSwiper] = useState<Swiper | null>(null);
+  const [isModelLoaded, setIsModelLoaded] = useState(false);
 
   const value = {
     activeIndex,
     setActiveIndex,
     swiper,
-    setSwiper
+    setSwiper,
+    isModelLoaded,
+    setIsModelLoaded
   };
 
   return (

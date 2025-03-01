@@ -40,7 +40,6 @@ export const companies = [
               "Web Workers",
             ],
             achievements: [
-              "Architected and implemented real-time blockchain data synchronization system",
               "Built custom Web3 hooks and utilities now used across multiple dApps",
               "Implemented multi-chain wallet integration supporting 5+ networks",
               "Achieved 90%+ test coverage with comprehensive unit and integration tests",
@@ -53,7 +52,7 @@ export const companies = [
     },
     {
       name: "Talowiz",
-      position: "Senior Full Stack Engineer",
+      position: "SDE (Frontend)",
       logo: "talowiz.svg",
       experience: {
         projects: [
@@ -80,13 +79,9 @@ export const companies = [
               "Architected and implemented real-time collaboration features using WebSocket",
               "Built scalable state management system handling complex data flows",
               "Developed Chrome extension with advanced LinkedIn automation features",
-              // Backend Achievements
-              "Designed and implemented RESTful APIs serving 100K+ daily requests",
-              "Optimized database queries reducing response time by 40%",
-              "Implemented caching strategy with Redis reducing server load by 50%",
-              "Set up containerized microservices architecture using Docker",
-              "Managed AWS infrastructure including EC2, S3, and CloudFront",
-              "Implemented rate limiting and security measures for API protection",
+              "Optimized application performance achieving 40% faster load times",
+              "Created reusable component library reducing development time by 30%",
+              "Integrated analytics and monitoring improving user insight capture",
             ],
           },
         ],
@@ -94,7 +89,7 @@ export const companies = [
     },
     {
       name: "Chee Finance",
-      position: "Senior Frontend Engineer (DeFi)",
+      position: "Frontend Engineer (DeFi)",
       logo: "cheeFinance.png",
       experience: {
         projects: [
@@ -113,12 +108,10 @@ export const companies = [
               "The Graph",
             ],
             achievements: [
-              "Led the development of DeFi dashboard handling $10M+ in TVL",
-              "Implemented complex DeFi features including staking, farming, and liquidity provision",
-              "Built real-time price feeds and portfolio tracking system",
-              "Optimized gas calculations and transaction handling for better UX",
-              "Integrated multiple DEX aggregators for optimal swap rates",
-              "Implemented comprehensive error handling for failed transactions",
+              "Contributed to the development of DeFi dashboard features",
+              "Implemented staking and farming functionality under senior guidance",
+              "Assisted in building price feeds and portfolio tracking components",
+              "Added error handling for failed blockchain transactions",
             ],
           },
         ],
@@ -126,7 +119,7 @@ export const companies = [
     },
     {
       name: "Deloitte",
-      position: "Frontend Engineer",
+      position: "Associate Analyst",
       logo: "Deloitte.jpeg",
       experience: {
         projects: [
