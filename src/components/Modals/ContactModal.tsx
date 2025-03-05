@@ -25,7 +25,7 @@ export default function ContactModal({ isOpen , setIsOpen }: { isOpen: boolean ,
 
 
                 <div className="modal-action justify-center">
-                    <a className="btn btn-outline btn-ghost" href="https://calendly.com/gspaurgen/30min" target="_blank">
+                    <a className="btn btn-outline btn-ghost" href="https://topmate.io/paul13" target="_blank">
                         Schedule a call with me
                     </a>
                 </div>
